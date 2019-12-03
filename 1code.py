@@ -8,9 +8,9 @@
 # Define the main function
 def main():
 
-    # Initialize an array to hold the puzzle inputs, read in from file
+    # Initialize a list to hold the puzzle inputs, read in from file
     fuel_storage = []
-    # Initialize an array to hold the fuel totals after calculations
+    # Initialize a list to hold the fuel totals after calculations
     fuel_totals = []
     # Initialize an integer to hold the sum of fuel requirements
     fuel_sum = 0
@@ -21,7 +21,7 @@ def main():
     # Read the first line from the file
     line = file.readline()
 
-    # Pass the values from file into our fuel_storage array,
+    # Pass the values from file into our fuel_storage list,
     # as long as an empty string was not returned from readline
     while line != '':
         amount = int(line)
@@ -52,7 +52,7 @@ def calculate_fuel(fuel_storage, fuel_totals):
     # Initialize a variable to store our values in while performing operations
     value = 0
 
-    # Iterate through the array and perform calculations
+    # Iterate through the list and perform calculations
     for item in fuel_storage:
         # Perform calculations
         # Divide by 3 and round down
@@ -61,7 +61,7 @@ def calculate_fuel(fuel_storage, fuel_totals):
         # Subtract 2 from the previous value
         value -= 2
 	
-        # Append fuel value to fuel_totals array
+        # Append fuel value to fuel_totals list
         fuel_totals.append(value)
 
 
